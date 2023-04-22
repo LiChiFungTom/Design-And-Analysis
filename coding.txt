@@ -48,3 +48,63 @@ while length of node list h >= 2:
     create the last node by merging left and right,
     push last to the min-Heap of h 
 
+5. Finding the maximum of n numbers
+    Pseudo-code:
+        max([a1, a2, …, an]):                               T(n)
+            if n = 1:                                       O(1)
+                return a1                                   O(1)
+            else: 
+                m1 = max([a1, a2, …, an/2])                 T(n/2)
+                m2 = max([an/2+1, an/2+2, …, an])           T(n/2)
+                compare m1, m2 and return the larger one    O(1)
+
+6. MergeSort:
+    sort([a1, a2, …, an]):
+        if n = 1:
+            return [a1]
+        else: 
+            S1 = sort([a1, a2, …, an/2])
+            S2 = sort([an/2+1, an/2+2, …, an])
+            merge S1, S2 into a single sorted list
+
+7. QuickSort:
+    quicksort([a1, a2, …, an]):
+        if n = 1: return
+        else:
+            pIndex = partition([a1, a2, …, an])
+            if pIndex > 1:
+                quicksort([a1’, a2’, …, apIndex-1’])
+            if pIndex < n:
+                quicksort([apIndex+1’, apIndex+2’, …, an’])        
+
+8. The algorithm
+    largest(N, k):                                  T(n)
+        Pick some number a in N arbitrarily.        O(1)
+        Divide N into                           
+        L = {x |x ≥ a} and S = {x | x < a}.         O(n)
+        if |L| = k: return a                        O(1)
+        if |L| > k: return largest(L-{a}, k)        T(|L- { a } |)
+        if |L| < k: return largest(S, k-|L|)        T(| S |)
+
+        Time complexity: O(n2)
+
+9. def sort5(L):
+        "Sort a list L of 5 number in 7 comparisons"
+        a,b,c,d,e = L
+        if b < a:   a, b = b, a
+        if d < c:   c, d = d, c
+        if a < c:   a, b, c , d = c, d, a, b
+
+        if e > a:
+            if e > b :   pass
+            else:   b, e = e, b
+        else:
+            if e < c: c, a , b , e= e, c, a ,b
+            else:       a, b , e = e, a, b
+        
+        if d < b:
+            if d < a: return [c , d ,a ,b ,e]
+            else:   return [c, a, d, b, e]
+        else:
+            if d > e: return [c, a, b, e, d]
+            else:     return [c, a, b, d, e]
