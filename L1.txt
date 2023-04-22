@@ -1,0 +1,38 @@
+1. what is Analysis of alogorithms
+    
+    - Proof of correctness:
+        whether it is correct , it return the correct answer for any possible input
+        正確性證明：它是否正確，即它對任何可能的輸入都返回正確答案
+
+    - Eifficiency check:
+        - Time complexity analysis:
+            - find out how fast your algorithm runs
+        
+        - Space complexity analysis:
+            - how much memory space for the alogirthm requires
+    
+    - Look for improvement:
+            - decide whether your alogorithms is best possible
+            決定你的算法是否是最好的
+
+2. how to calculator GCD
+
+    - original GCD:
+        gcd(128,48)
+        = gcd(128-48, 48) = gcd(80, 48)
+        = gcd(80-48, 48) = gcd(32, 48)
+        = gcd(32, 48-32) = gcd(32, 16)
+        = gcd(32-16, 16) = gcd(16, 16)
+        = 16
+    
+    - improved GCD:
+        gcd(89, 55) = gcd(55, 34)
+		= gcd(34, 21)
+		= gcd(21, 13)
+        = gcd(13, 8)
+		= gcd(8, 5)
+		= gcd(5, 3)         
+        = gcd(3, 2)
+		= gcd(2, 1)
+        = gcd(1, 0)
+		= 1
