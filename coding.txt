@@ -1,0 +1,28 @@
+1. what is the GCD(original) python code and Pseudo-code?
+    
+
+    Python code:
+    def gcd(a,b):
+        while a!=b:
+            if a > b:
+                a = a - b
+            else:
+                b= b - a
+        return a
+
+    Pseudo-code:
+        gcd(a,b):
+            while a =/ b:
+                if a > b:
+                    a = a - b
+                else:
+                    b = b - a
+            return a
+
+2. what is the improved of GCD python code?
+    def gcd2(a,b):
+        if a < b :
+            a,b = b,a
+        while a%b > 0 :
+            a,b = b,a %b
+        return b
