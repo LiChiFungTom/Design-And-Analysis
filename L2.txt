@@ -1,0 +1,37 @@
+1. what is the definition Greedy heuristics?
+    -  A basic algorithm design technique that solves an optimization problem by finding locally optimal solutions
+    通過尋找局部最優解來解決優化問題的基本算法設計技術
+
+- Advantage
+    - don't need to pay much effort at each step
+
+- Disvantage 
+    - Couldn't take a brod view- mytoic, sometimes far from the globally optimal solution
+    無法開闊視野——瞳孔縮小，有時與全局最優解相去甚遠
+
+2. Encoding problem: Definitions
+    E = {a,b,c,d}
+    C: a -> 1 , b->01 , c-> 001 , d-> 0001
+    S: aabaacda -> 11 01 11 001 0001 1
+
+    Lc(S) = (5 X 1 + 1 X 2 + 1 X 3 + 1 X 4)/8 = 14/8 = 1.75
+
+3. code tree
+
+4. Huffman code
+    
+    - Build the code tree in a bottom-up manner
+    以自下而上的方式構建代碼樹
+
+    - Time complexity
+        - Simple implementation: O(| E |2) time.
+        - Using a min-Heap: O(| E | log | E |) time
+
+5. what is Min-Heap?
+    - Is a Tree-based data structure that maintains a set b of numbers
+    是一種基於樹的數據結構，它維護著一組 B 的 n 個數字
+
+    - allow access to the minimum element in constant time
+    並允許在常數時間內訪問最小元素
+
+6. Huffman code calculator and draw a tree
