@@ -1,0 +1,33 @@
+1. what is Divide?
+    - given some problem, divide it into a number of similar, but simpler subproblems
+    給定一些問題，將其分成許多相似但更簡單的子問題
+
+    - solve each of these subproblems recursively
+    遞歸地解決這些子問題中的每一個
+
+2. what is Conquer?
+
+    - Combine the solutions of each of these subproblems into a solution of the original problem
+    將每個子問題的解決方案組合成原始問題的解決方案
+
+3. what is the T(n) P.9
+
+4. what is the MergeSort Time complexity?
+    - T(n) = 2 T(n /2 ) + O(n) 
+    
+    -T(n) = O(n log n)
+
+5. Master theorem for analyzing T(n)  P.41
+    - (𝑂(𝑛^𝑑 )          𝑖𝑓 𝑑 > 𝑙𝑜𝑔 𝑏𝑎)
+    - (𝑂(𝑛^𝑑 𝑙𝑜𝑔 𝑛)     𝑖𝑓 𝑑 = l𝑜𝑔 𝑏𝑎)
+    - (𝑂(𝑛^𝑑 𝑙𝑜𝑔 𝑛)     𝑖𝑓 𝑑 = 𝑙𝑜𝑔 𝑏𝑎)
+    
+    *** 𝑇(𝑛)=𝑎 𝑇(⌈𝑛/𝑏⌉) + 𝑂( 𝑛^𝑑 ) ***
+
+6. what is linear time selection
+                    |L|                     |S|
+    largest |_______________________________________________| smallest
+            1st                     k-th                 n-th
+
+7. Linear Time Selection: Time Complexity
+    T(n) <= 24n
