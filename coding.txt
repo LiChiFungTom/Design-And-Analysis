@@ -108,3 +108,156 @@ while length of node list h >= 2:
         else:
             if d > e: return [c, a, b, e, d]
             else:     return [c, a, b, d, e]
+
+
+10. Adjacency matrix:
+    def __init__(self, numNodes): 
+        self.graph = [] # 2D list
+        for i in range(numNodes):
+            self.graph.append([0] * numNodes)
+        self.numNodes = numNodes
+  
+    # function to add an edge to graph 
+    def addEdge(self,u,v): 
+        self.graph[u][v] = 1 
+        self.graph[v][u] = 1 
+
+11. Adjacency List:
+    class GraphAL: 
+    # Constructor 
+    def __init__(self, numNodes): 
+        # default dictionary to store graph 
+        self.graph = defaultdict(list)
+        self.numNodes = numNodes 
+  
+    # function to add an edge to graph 
+    def addEdge(self,u,v): 
+        self.graph[u].append(v)
+        self.graph[v].append(u)
+
+12. Breadth-First Search (BFS) Algorithm
+
+BFS(s): // s is the source vertex
+
+   Mark all vertices u as not visited
+   Create a queue Q
+        Mark s as visited and enqueue (i.e., add) s to Q
+           
+        while Q is not empty:
+                dequeue (i.e., remove) a vertex u from Q
+                print vertex u
+                
+                for each neighbor i of u:
+                    if i is not visited:
+                        mark i as visited
+                        enqueue i to Q
+
+13. BFS on Adjacency List: Python code
+    class GraphAL: 
+    # ... 
+    def BFS(self, s): 
+        visited = [False] * self.numNodes 
+  
+        queue = [] 
+        queue.append(s) 
+        visited[s] = True
+  
+        while queue: 
+            u = queue.pop(0) 
+            print (u, end = " ") 
+            for i in self.graph[u]: 
+                if visited[i] == False: 
+                    queue.append(i) 
+                    visited[i] = True
+
+from graphviz import Digraph
+def BFS2(self, s): 
+        dist = [None] * self.numNodes # distance from s
+        bf_tree = Digraph() # breadth-first tree
+        queue = []       
+        queue.append(s)     
+        dist[s] = 0   
+  
+        while queue: 
+            u = queue.pop(0)      
+            print ("(node %d, dist %d)" % (u, dist[u]), end = " ") 
+            
+            for i in self.graph[u]:    
+                if dist[i] == None:
+                    bf_tree.addEdge(str(u),str(i))
+                    queue.append(i)         
+                    dist[i] = dist[u]+1
+        print()            
+        return bf_tree 
+
+- Time Complexity : O(V+E)
+
+14. BFS on Adjacency Matrix: Python code
+    class GraphAM: 
+    # ... 
+    def BFS(self, s): 
+        visited = [False] * self.numNodes   
+  
+        queue = []        
+        queue.append(s)     
+        visited[s] = True   
+        
+        while queue: 
+            u = queue.pop(0)     
+            print (u, end = " ") 
+            for i in range(self.numNodes):  
+                if self.graph[u][i] == 1                
+                    and visited[i] == False:
+                    queue.append(i)         
+                    visited[i] = True
+
+- Time complexity = O(V+ V2) = O(V2^2) 
+
+15. Depth-First Search (DFS) Algorithm
+
+    Mark all vertices u as not visited
+    DFS(s)
+
+    DFS(x):   
+    mark x as visited
+    print vertex x
+               
+    for each neighbor y of x:
+        if vertex y is not visited:
+            DFS(y)
+
+- Time complexity = O(V+E)
+
+16. DFS on Adjacency List: Python code
+
+    def DFS(self, s):   
+    visited = [False] * self.numNodes 
+    self.rdfs(s, visited) # Call the recursive function
+
+    def rdfs(self, x, visited): 
+        visited[x] = True
+        print(x, end = ' ')
+
+        for y in self.graph[x]: 
+        if visited[y] == False: #explore unvisited neighbors
+            self.rdfs(y, visited)
+
+17. Topological Sort
+
+def TopologicalSort(self): 
+    visited = [False] * self.numNodes 
+    stack = []
+    for s in range(self.numNodes): 
+        if visited[s] == False:
+            self.rdfs3(s, visited, stack) 
+        
+    while stack: # print the topologically sorted vertices
+        print(stack.pop(), end = ' ')
+    print()
+
+def rdfs3(self, x, visited, stack): 
+    visited[x] = True # If x is not visited, mark it visited
+    for y in self.graph[x]: 
+	if visited[y] == False:
+          self.rdfs3(y, visited, stack) 
+    stack.append(x)
