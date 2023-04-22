@@ -1,0 +1,29 @@
+1. what is Adjacency matrix ? P.4
+
+2. what is Adjacency List? p.7
+
+3. what is Breadth-First Search (BFS)?
+    - is a simple algorithm for searching a graph
+
+    - These have Breadth-First Tree and BFS
+
+4. what is Linear Data structures
+    - Array         : access an element with an index                   訪問具有索引的元素
+    - Linked list   : elements are connected through a series of nodes  元素通過一系列節點連接
+    - Stack : last in first list
+    - Queue : first in first out
+
+5. what is DFS?
+    - Depth-first search is another strategy for exploring a graph; it searches “deeper” in the graph whenever possible.
+    深度優先搜索是探索圖的另一種策略； 它會盡可能在圖表中搜索“更深層次”
+
+
+6. what is Directed Graph: Adjacency Matrix? P.53
+
+7. what is Directed Graph: Adjacency List? p.54
+
+8. what is Depth-First Tree? P.64
+
+9. What is Timestamps? P.66
+
+10. What is Topological Sort: Directed Acyclic Graphs? P.92
