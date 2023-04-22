@@ -26,3 +26,25 @@
         while a%b > 0 :
             a,b = b,a %b
         return b
+
+3. Huffman code 
+while length of node list h >= 2:
+    get index ind1 of node with the lowest freq
+    left = h[ind1]
+    delete this node
+
+    get index ind2 of node with the 2nd lowest freq
+    right = h[ind2]
+    delete this node
+    
+    create the last node by merging left and right,
+	summing up their freq and append last to h 
+
+4. Huffman code with using a min-Heap
+while length of node list h >= 2:
+    pop an element left from min-Heap of h
+    pop an element right from min-Heap of h
+
+    create the last node by merging left and right,
+    push last to the min-Heap of h 
+
