@@ -1,0 +1,19 @@
+1. what is th Spanning Tree ?   P. 1
+    - There has 3 type of spainning Tree
+        - a spanning tree
+        - not connected
+        - has cycle
+
+2. what is Minimum Spanning Tree?   P. 12
+    - This is a tree to count the shot path 
+
+3. what is Kruskal's algorithm? p. 13
+    - Sort all the edges
+    - The minimum edges to the high edges
+    - no cycle
+
+4. what is Implementing Kruskal's algorithm?
+    - have a subtrees
+    - Find set: 
+        - have connent together
+        {a},{b},{i,c},{h,g},{d,e,f}
