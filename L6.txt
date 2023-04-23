@@ -1,0 +1,22 @@
+1. what is the Shortest Path Tree (SPT)
+    - A shortest path tree is a tree of G that has the root of s and satisfies the following property
+    最短路徑樹是 G 的樹，其根為 s 並滿足以下性質
+        - a shortest path from s to u
+
+2. what is the problem on this SPT?
+    Input : A weighted directed graph G = (V,E), and a source S e V
+    加權有向圖 G = (V, E) 和源 S e V
+
+    Output : Build a shortest path tree (SPT) of G rooted at s.
+    構建以 s 為根的 G 的最短路徑樹 (SPT)。
+
+3. what is the Dijkstra's algorithm?
+    - Adding a correct outgoing edge can lead to a larger subtree of SPT
+    添加正確的出邊可以導致更大的 SPT 子樹
+
+4. How it work with Dijkstra's algorithm? P. 11
+
+5. how to draw a Implementing the Dijkstra’s algorithm P.32
+
+6. the Dijkstra's algorithm : Time complexity = O(V(V+E)) = O(VE) 
+7. the Total time complexity of Performing Realx = O(E+V^2) time
