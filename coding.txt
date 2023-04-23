@@ -261,3 +261,15 @@ def rdfs3(self, x, visited, stack): 
 	if visited[y] == False:
           self.rdfs3(y, visited, stack) 
     stack.append(x)
+
+
+18. Kruskal's algorithm
+    MST-KRUSKAL(G,w)
+    for each vertex v e G.V
+        MARKE-SET(v)
+    sort the edges of G.E into nondecreasing order by weight w
+    for each edge(u,v) e G.E, taken in nondecreasing order by weight
+        if FIND-SET(u) != FIND-SET(v)
+            A = A U {(u,v)}
+            UNION(u,v)
+    return A
