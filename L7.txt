@@ -1,0 +1,31 @@
+Suggest to watch vido
+
+1. what is Modeling Computation?
+    - There are 3 types
+        
+        - Finite automata are primitive, modelling computers with a very limited memory.
+        有限自動機是原始的建模計算機，內存非常有限
+
+        - Turing machines are more powerful and can model the computation of a PC or any computer.
+        圖靈機更強大，可以模擬 PC 或任何計算機的計算。
+
+        - Based on Turing machines, we can easily study the limitation of computers, showing that some problems cannot be solved by computers.
+        基於圖靈機，我們可以很容易地研究計算機的局限性，表明有些問題是計算機無法解決的
+
+2. Have a look of Transition function (f) P. 12 AND P. 14
+
+3. what is DFA and NFA?
+    DFA:
+        - is a deterministic                        確定性的
+        - given any pair of state and input         給定任何一對狀態和輸入
+        - single state in the next step             下一步單一狀態
+
+    NFA:
+       - A nondeterministic finite automaton is more flexible, allowing more than one possible next state
+       非確定性有限自動機更靈活，允許不止一種可能的下一狀態
+
+       - At least tow consecutive bits P. 24
+
+4. Is NFA more powerful than DFA?
+    - NO , NFA can solved the problem and the DFA also can , the set of strings over a certain alphabet that can be accepted by both
+
